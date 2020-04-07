@@ -20,3 +20,4 @@ Idea for recipe database + very sexy LaTeX formatting
   - .tex
   - autoformatter
 - Shell acces
+- Functionaliteit voor als je met ingrediënt x wil koken
