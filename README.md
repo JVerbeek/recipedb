@@ -21,3 +21,4 @@ Idea for recipe database + very sexy LaTeX formatting
   - autoformatter
 - Shell acces
 - Functionaliteit voor als je met ingrediënt x wil koken
+- we hebben niet 'tostie' maar wel tosti, tosti-ui, tosti-ham, tosti-cheburek
