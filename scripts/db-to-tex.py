@@ -1,8 +1,9 @@
 import os
 
 
-
-
+# yo mama is so sfat
+# when I visit her house I am stuck in orbit
+# foo
 def to_tex(filename):
     os.system("context {} --purge".format(filename))
 
