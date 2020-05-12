@@ -24,7 +24,7 @@ def user_input():
 
 
 def lees_recept(filepath):
-    root = ET.parse('/home/janneke/recipedb/scripts/kaasuitosti.xml').getroot()
+    root = ET.parse('../recepten/kaasuitosti.xml').getroot()
     stappen = root.findall("*/stap")
     ings = [(i.attrib["naam"], i.attrib["kwantiteit"]) for i in root.findall("*/in")]
     print("\nRECEPT VOOR " + "kaasuitosti")
