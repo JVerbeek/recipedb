@@ -1,1 +1,1 @@
-print("HEYEAYEAYEAYEAYAH")
+print("je moeder")
