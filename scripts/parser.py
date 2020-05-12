@@ -12,7 +12,7 @@ def user_input():
 
     """)
     while not_exited:
-        inp = input("Hallo! Welkom in RecipeDB. Wat wil je koken? \n")
+        inp = input("Hallo!!! Welkom in RecipeDB. Wat wil je koken? \n")
         if "niks" in inp:
             not_exited = False
             print("Ja doei.")
