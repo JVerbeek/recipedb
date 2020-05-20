@@ -25,7 +25,6 @@ def user_input():
 
 
 def get_recipe_list():
-    # recipe_list = ["kaasuitosti", "tosti_fake"]
     recipe_list = [item.rstrip('.xml') for item in os.listdir("recepten")]
     return recipe_list
 
