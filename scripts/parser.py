@@ -19,7 +19,7 @@ def user_input():
             not_exited = False
             print("Ja doei.")
         if inp in get_recipe_list():
-            lees_recept(f"../recepten/{inp}.xml")
+            lees_recept(f"recepten/{inp}.xml")
         else:
             get_suggestions(inp)
         # elif levenshtein("tosti", inp)>3 and "tosti" not in inp:
