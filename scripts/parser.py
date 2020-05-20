@@ -18,7 +18,7 @@ def user_input():
             not_exited = False
             print("Ja doei.")
         elif levenshtein("tosti", inp)>3 and "tosti" not in inp:
-            print(f"We hebben helaas niks kunnen vinden voor {inp}")
+            print(f"We hebben helaas niks kunnen vinden voor: {inp}")
         else:
             lees_recept("kaasuitosti.xml")
 
