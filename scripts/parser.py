@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+import os
 
 
 def user_input():
@@ -17,14 +18,37 @@ def user_input():
         if "niks" in inp:
             not_exited = False
             print("Ja doei.")
-        elif levenshtein("tosti", inp)>3 and "tosti" not in inp:
-            print(f"We hebben helaas niks kunnen vinden voor: {inp}")
+        if inp in get_recipe_list():
+            lees_recept(f"../recepten/{inp}.xml")
         else:
-            lees_recept("kaasuitosti.xml")
+            get_suggestions(inp)
+        # elif levenshtein("tosti", inp)>3 and "tosti" not in inp:
+        #     print(f"We hebben helaas niks kunnen vinden voor: {inp}")
+        # else:
+        #     lees_recept("kaasuitosti.xml")
+
+
+def get_recipe_list():
+    recipe_list = ["kaasuitosti", "tosti_fake"]
+    return recipe_list
+
+
+def get_suggestions(inp):
+    suggestion_list = []
+    for recipe in get_recipe_list():
+        if levenshtein(recipe, inp)<3 or inp in recipe:
+            suggestion_list.append(recipe)
+    result = suggestion_list
+    if not suggestion_list:
+        print(f"We hebben helaas niks kunnen vinden wat lijkt op: {inp}")
+    else:
+        print(f"Het recept voor {inp} staat helaas niet in RecipeDB, zocht je "
+              "misschien een van deze?")
 
 
 def lees_recept(filepath):
-    root = ET.parse('../recepten/kaasuitosti.xml').getroot()
+    path = os.path.abspath(filepath)
+    root = ET.parse(path).getroot()
     stappen = root.findall("*/stap")
     ings = [(i.attrib["naam"], i.attrib["kwantiteit"]) for i in root.findall("*/in")]
     print("\nRECEPT VOOR " + "kaasuitosti")
