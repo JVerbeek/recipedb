@@ -45,8 +45,9 @@ def get_suggestions(inp):
         output = ""
         for item in suggestion_list:
             output += f"{item}\t"
+        output = output.rstrip('\t')
         print(f"Het recept voor {inp} staat helaas niet in RecipeDB, zocht je "
-              f"misschien een van deze?\n{output.rstrip('\t')}") # "\n{output.rstrip('\t')}")
+              f"misschien een van deze?\n{output}")
 
 def lees_recept(filepath):
     path = os.path.abspath(filepath)
