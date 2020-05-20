@@ -49,6 +49,7 @@ def get_suggestions(inp):
         print(f"Het recept voor {inp} staat helaas niet in RecipeDB, zocht je "
               f"misschien een van deze?\n{output}")
 
+
 def lees_recept(filepath):
     path = os.path.abspath(filepath)
     root = ET.parse(path).getroot()
