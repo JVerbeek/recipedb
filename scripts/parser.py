@@ -75,7 +75,7 @@ def levenshtein(s1, s2):
             else:
                 distances_.append(1 + min((distances[i1], distances[i1 + 1], distances_[-1])))
         distances = distances_
-    print(distances[-1])
+    # print(distances[-1])
     return distances[-1]
 
 def main():
