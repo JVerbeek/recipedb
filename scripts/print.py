@@ -20,6 +20,8 @@ def print_file(file_path: str, printer: str) -> None:
     Prints a file from the printer in Louis' room.
     :param file_path: path to the file that needs to be printed
     :type file_path: str
+    :param printer: name of the printer
+    :type printer: str
     """
     os.system(f"lpr -P {printer} {file_path}")
 
